@@ -1,6 +1,5 @@
-<!-- app/views/users/new.html.erb -->
 
-<h1>Signup!</h1>
+<h1>Signup</h1>
 
 <%= form_for :user, url: '/users' do |f| %>
   Name: <%= f.text_field :name %>
@@ -11,10 +10,3 @@
 <% end %>
 
 
-<h1>Login </h1>
-
-<%= form_tag '/login' do %>
-	Email: <%= text_field_tag :email %>
-	Password: <%= password_field_tag :password %>
-	<%= submit_tag "Submit" %>
-<% end %>
