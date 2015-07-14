@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+20.times do
+  User.create!(name: Faker::Name.name, password: "totallysecure123")
+end
+
+User.all.each do |user|
+  3.times do
+  	Photo.create!(title: Faker::Lorem.sentence, user_id: user.id)
+  end
+end
