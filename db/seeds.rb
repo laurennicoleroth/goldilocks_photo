@@ -12,6 +12,6 @@ end
 
 User.all.each do |user|
   3.times do
-  	Photo.create!(title: Faker::Lorem.sentence, user_id: user.id)
+  	Photo.create!(title: Faker::Lorem.sentence, attachment: Faker::Avatar.image, user_id: user.id)
   end
 end

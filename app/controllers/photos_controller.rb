@@ -1,6 +1,11 @@
 class PhotosController < ApplicationController
+  before_filter :authorize
+
   def index
   	@photos = Photo.all
+  end
+
+  def new
   end
 
   def show

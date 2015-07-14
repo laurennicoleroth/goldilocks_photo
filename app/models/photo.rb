@@ -1,3 +1,4 @@
 class Photo < ActiveRecord::Base
-  belongs_to :gallery
+  mount_uploader :attachment, AttachmentUploader 
+  validates :title, presence: true #make sure photo has a title
 end
