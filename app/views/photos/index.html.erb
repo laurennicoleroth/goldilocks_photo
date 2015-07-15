@@ -1,4 +1,12 @@
 <h1>All Photos</h1>
+<% if !flash[:notice].blank? %>
+  <div class="alert alert-info">
+  <%= flash[:notice] %>
+  </div>
+<% end %>
+<br />
+<%= link_to "New Resume", new_resume_path, class: "btn btn-primary" %>
+<br />
  
 <table>
   <tr>

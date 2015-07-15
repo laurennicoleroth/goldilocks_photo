@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GifVault</title>
+  <title>Goldilocks Creative</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -15,7 +15,9 @@
   <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
 <% end %>
 
-<%= yield %>
+<div class="container" style="padding-top:20px;">
+	<%= yield %>
+</div>
 
 </body>
 </html>
