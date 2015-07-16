@@ -1,33 +1,15 @@
-<h1>All Photos</h1>
 <% if !flash[:notice].blank? %>
   <div class="alert alert-info">
   <%= flash[:notice] %>
   </div>
 <% end %>
 <br />
-<%= link_to "New Resume", new_resume_path, class: "btn btn-primary" %>
+<%= link_to "+", new_photo_path, class: "btn btn-primary" %>
 <br />
  
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Attachment URL</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
  
 <% @photos.each do |photo| %>
-  <tr>
-    <td><%= photo.title %></td>
-    <td><%= image_tag(photo.attachment) %></td>
-    <td><%= link_to "Show", photo %></td>
-    <td><%# link_to "Edit", edit_photo_path(photo) %></td>
-    <td><%= link_to "Remove", photo, method: :delete, data: { confirm: "Are you sure?" } %></td>
-  </tr>
+  <%= image_tag('http://www.engraversnetwork.com/files/placeholder.jpg') %>
 <% end %>
-</table>
- 
-<br>
- 
-<%= link_to "New photo", new_photo_path %>
+
