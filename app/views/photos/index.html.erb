@@ -1,15 +1,6 @@
-<% if !flash[:notice].blank? %>
-  <div class="alert alert-info">
-  <%= flash[:notice] %>
-  </div>
-<% end %>
-<br />
-<%= link_to "+", new_photo_path, class: "btn btn-primary" %>
-<br />
- 
-
- 
-<% @photos.each do |photo| %>
-  <%= image_tag('http://www.engraversnetwork.com/files/placeholder.jpg') %>
-<% end %>
+ <div id="photos">
+   <% @photos.each do |photo| %>
+    <%= image_tag('http://www.engraversnetwork.com/files/placeholder.jpg') %>
+   <% end %>
+</div>
 
